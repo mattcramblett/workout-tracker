@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+    session:
+      timeout: 15m
+      cookie:
+        name: SPORTIVESERVER
+
+spring:
+  application:
+    name: 'sportive-server'
+  datasource:
+    driver-class-name: 'org.mariadb.jdbc.Driver'
+  liquibase:
+    change-log: 'classpath:/database/changelog-master.yml'
+    drop-first: false
